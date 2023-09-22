@@ -1,0 +1,27 @@
+fun main() {
+    val secretNum = (1..50).random()
+    var attempts = 0
+
+    println("Guess the game! Are you ready?")
+    println("Enter any number until you could guess the secret number between 1 and 50.")
+
+    while (true) {
+        print("Enter your number: ")
+        val guess = readLine()?.toIntOrNull()
+
+        if (guess == null) {
+            println("Invalid. Please try again :(")
+            continue
+        }
+        attempts++
+
+        when {
+            guess < secretNum -> println("Too small, try again.")
+            guess > secretNum -> println("Too large, try again.")
+            else -> {
+                println("Hooray! You got the secret number in $attempts tries.")
+                break
+            }
+        }
+    }
+}
