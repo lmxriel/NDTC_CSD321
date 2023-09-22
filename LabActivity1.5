@@ -1,0 +1,15 @@
+fun main() {
+
+    println ("Enter a number ")           //modify the previous program such that only multiples of three or five
+    val num = readLine()!!.toInt()
+    var multiples = 0
+    var intNum: Int = 1
+
+        for (intNum in 1 .. num) {
+            if (intNum % 3 == 0 || intNum % 5 == 0){
+                multiples += intNum
+            }
+        }
+
+    println("The sum of multiples 3 or 5 is = $multiples")
+}
