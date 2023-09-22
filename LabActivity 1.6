@@ -1,0 +1,32 @@
+fun main() {
+
+    println("Enter a number ")
+    val num = readLine()!!.toInt()
+    var intNum: Int = 1
+
+    // make an option HUEY
+
+    print("Which operation would you like to use?")
+    println(" The sum of 1 to $num or the product of 1 to $num?")
+    println("Enter 1 for sum or 2 for product")
+    val pinili = readLine()!!.toInt()
+
+    var longSum: Long = 0
+    var longProduct: Long = 0
+
+    when (pinili) {
+        1 -> {
+            for (intNum in 1..num) {
+                longSum += intNum
+            }
+            println("The sum of 1 to $num is $longSum")
+        }
+
+        2 -> {
+            for (intNum in 1..num) {
+                longProduct *= intNum
+            }
+            println("The product of numbers from 1 to $num is: $longProduct")
+        }
+    }
+}
