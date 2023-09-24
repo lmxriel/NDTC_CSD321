@@ -1,0 +1,15 @@
+fun main() {
+
+    println ("Input a year to print the next leap years") 
+    var yr = readLine()!!.toInt()
+    var count = 0 
+
+    while (count < 20) {
+        if (yr % 4 == 0 && (yr % 100 != 0 || yr % 400 == 0)) {
+
+            println(yr)
+            count++
+        }
+        yr++
+    }
+}
